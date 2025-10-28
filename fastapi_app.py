@@ -38,3 +38,6 @@ def analyze(req: AnalyzeRequest):
             "sentiment": sentiment
         })
     return {"results": results}
+@app.get("/")
+def health():
+    return {"status": "ok", "service": "VADER Sentiment API"}
